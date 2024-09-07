@@ -52,6 +52,9 @@ export default tseslint.config({
 
 ## Technologies:
 
-pnpm
-Vite 
-TypeScript + SWC
+pnpm,
+Vite,
+TypeScript + SWC,
+
+Zustand,
+Tan (React) Query,
