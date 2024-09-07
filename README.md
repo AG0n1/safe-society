@@ -48,3 +48,10 @@ export default tseslint.config({
   },
 })
 ```
+
+
+## Technologies:
+
+pnpm
+Vite 
+TypeScript + SWC
