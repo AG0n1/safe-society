@@ -1,7 +1,6 @@
-import { Button } from 'antd';
 import {Header as AntDesignHeader} from 'antd/es/layout/layout'
-import { ReactNode } from 'react';
 import { IHeaderButtons } from '../../types/HeadetInterfaces';
+import { generateButtons } from '../../Helpers/actions';
 
 const Header: React.FC = () => {
 
@@ -9,7 +8,7 @@ const Header: React.FC = () => {
         {
             title: 'Главная',
             type: 'link',
-            href: '',
+            href: '/',
         },
         {
             title: 'Новости',
@@ -18,36 +17,9 @@ const Header: React.FC = () => {
         },
     ]
 
-    const generateButtons = () => {
-        return buttonsArray.map((button: IHeaderButtons) => {
-            switch (button.type) {
-                case ('link'):
-                    return (
-                        <Button>
-                            {button.title}
-                        </Button>
-                    )
-
-                case ('action'):
-                    return (
-                        <Button onClick={button.action}>
-                            {button.title}
-                        </Button>
-                    )
-
-                default: 
-                    return (
-                        <Button>
-                            {button.title}
-                        </Button>
-                    )
-            }
-        })
-    }
-
     return (
         <AntDesignHeader>
-            {generateButtons()}
+            {generateButtons(buttonsArray)}
         </AntDesignHeader>
     )
 }
