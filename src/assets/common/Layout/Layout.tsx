@@ -1,10 +1,14 @@
+import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 
 const Layout: React.FC = () => {
     return (
         <>
-           <Header>
-            </Header> 
+           <Header />
+            <p>
+                ПРивет
+            </p>
+           <Footer />
         </>
     )
 }
