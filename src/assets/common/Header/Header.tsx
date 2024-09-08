@@ -1,20 +1,26 @@
 import {Header as AntDesignHeader} from 'antd/es/layout/layout'
 import { IHeaderButtons } from '../../types/HeadetInterfaces';
 import { generateButtons } from '../../Helpers/actions';
+import { titles } from '../constants/titles';
 
 const Header: React.FC = () => {
 
     const buttonsArray: IHeaderButtons[] = [
         {
-            title: 'Главная',
+            title: titles.header.navButtons.main,
             type: 'link',
             href: '/',
         },
         {
-            title: 'Новости',
+            title: titles.header.navButtons.news,
             type: 'link',
-            href: '',
+            href: 'news',
         },
+        {
+            title: titles.header.navButtons.support,
+            type: 'link',
+            href: 'support'
+        }
     ]
 
     return (
